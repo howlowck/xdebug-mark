@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>XDebug Mark</title>
+</head>
+<body>
+    <a href="javascript: (
+        function () {
+        	var url = window.location.search;
+            if (url.indexOf('XDEBUG_SESSION_START') === -1) {
+                var separator = url.indexOf('?') !== -1 ? '&' : '?';
+                url = url + separator + 'XDEBUG_SESSION_START=XDEBUG_ECLIPSE';
+            }
+        }());">XDebug</a>
+</body>
+</html>
